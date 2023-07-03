@@ -9,7 +9,7 @@ const FormLogin = () => {
   const navigate = useNavigate()
   const onSubmit = async (data) => {
     await axios
-      .post("http://localhost:8080/user/login", data)
+      .post("https://softuno.onrender.com/user/login", data)
       .then((response) => {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("user", JSON.stringify(response.data.user));

@@ -19,7 +19,7 @@ const FormVisitor = ({
     setVisible(false);
     if (initialData) {
       await axios
-        .put(`http://localhost:8080/visitor/${initialData.id}`, data, {
+        .put(`https://softuno.onrender.com/visitor/${initialData.id}`, data, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -30,7 +30,7 @@ const FormVisitor = ({
         .catch((err) => console.log(err));
     } else {
       await axios
-        .post("http://localhost:8080/visitor", data, {
+        .post("https://softuno.onrender.com/visitor", data, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },

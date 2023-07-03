@@ -8,7 +8,7 @@ const FormVisitorNote = ({ setisVisible, initialData, getVisitors }) => {
   const onSubmit = async (data) => {
     console.log(data);
     await axios
-      .put(`http://localhost:8080/visitor/addNote/${initialData}`, data, {
+      .put(`https://softuno.onrender.com/visitor/addNote/${initialData}`, data, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

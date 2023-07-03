@@ -9,7 +9,7 @@ const Visitor = ({
 }) => {
   const handleDelete = async (id) => {
     await axios
-      .delete(`http://localhost:8080/visitor/${id}`, {
+      .delete(`https://softuno.onrender.com/visitor/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

@@ -13,7 +13,7 @@ const Visitors = () => {
   const navigate = useNavigate();
   const getVisitors = async () => {
     await axios
-      .get("http://localhost:8080/visitor")
+      .get("https://softuno.onrender.com/visitor")
       .then((response) => setvisitors(response.data))
       .catch((error) => {
         console.log(error);
